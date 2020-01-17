@@ -143,17 +143,17 @@ namespace GoogleARCore.Examples.HelloAR
                   //  hit.Pose.position.Set(hit.Pose.position.x, hit.Pose.position.y + 100f, hit.Pose.position.z);
 
                     // Instantiate prefab at the hit pose.
-                   // if (!wasSpawn)
-                   // {
-                        var gameObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
+                    if (!wasSpawn)
+                    {
+                        var gameObject = GameObject.Find("EventSystem").GetComponent<constructor>().MyStart(hit.Pose);
                         wasSpawn = true;
-                  //  }
+                    }
 
                     
 
                     // Compensate for the hitPose rotation facing away from the raycast (i.e.
                     // camera).
-                    gameObject.transform.Rotate(0, k_PrefabRotation, 0, Space.Self);
+                    //gameObject.transform.Rotate(0, k_PrefabRotation, 0, Space.Self);
 
                     // Create an anchor to allow ARCore to track the hitpoint as understanding of
                     // the physical world evolves.

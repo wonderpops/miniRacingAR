@@ -24,7 +24,7 @@ public class SimpleCarController : MonoBehaviour
     private void Start()
     {
         mCont = GameObject.FindGameObjectWithTag("Joy").GetComponent<MobileController>();
-        gameObject.GetComponent<Rigidbody>().centerOfMass.Set(0, -0.5f, 0);
+        gameObject.GetComponent<Rigidbody>().centerOfMass.Set(0, -0.02f, 0);
     }
     public void ApplyLocalPositionToVisuals(WheelCollider collider)
     {
